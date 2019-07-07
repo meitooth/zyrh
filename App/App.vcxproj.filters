@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{aa1409be-f73c-41b0-9bd6-d8dc4514aaf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="capture">
+      <UniqueIdentifier>{39a0b874-ff83-46b5-9f57-2731397ddfd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{0c7868bf-3131-4999-91cb-72429a9f2abf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ocr">
+      <UniqueIdentifier>{7e89fcd2-f433-4afe-bf4d-3d24d2634efb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libcurl">
+      <UniqueIdentifier>{3663319c-f9b1-410d-a1b1-8f6b21b2b6ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{529b67ed-7580-41e3-bad2-91970d7ff372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmd">
+      <UniqueIdentifier>{65686655-3e6e-4bfb-8744-51d0353d9591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aes256">
+      <UniqueIdentifier>{3fa021d4-3ce7-4915-b75a-1dab0e102c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="websocket">
+      <UniqueIdentifier>{cb931715-a6c6-477c-b3b0-e1bc837463e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="websocket\.h">
+      <UniqueIdentifier>{dc7129a9-4a69-462e-89d7-c220ab926c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="websocket\lib">
+      <UniqueIdentifier>{ac378d6a-35a2-45ed-8f5d-0eecba2c973e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{5e5461a5-016f-4fcb-a9f6-f3b32829cbe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="client">
+      <UniqueIdentifier>{a4d7075f-e39c-4a57-ab13-04a744f316d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{a8d22e54-1490-4da7-af73-782706456f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sub">
+      <UniqueIdentifier>{fa00d2c2-20f2-4de9-8487-f9c8574d086c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{02e84f2c-bb4a-47d8-8bb6-af2a502c5142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="editlist">
+      <UniqueIdentifier>{b2af05f3-5a0c-4cc2-97b5-9b843f843ae9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AppDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogHome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="log_deffine.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="LogManager.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="ocr.h">
+      <Filter>ocr</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptureScreen.h">
+      <Filter>capture</Filter>
+    </ClInclude>
+    <ClInclude Include="desktopCapture.h">
+      <Filter>capture</Filter>
+    </ClInclude>
+    <ClInclude Include="TableManager.h">
+      <Filter>capture</Filter>
+    </ClInclude>
+    <ClInclude Include="json\allocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\assertions.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\autolink.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\config.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\features.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\forwards.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_batchallocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_cmd.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_tool.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\value.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\version.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\curl.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\CurlhttpClient.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\curlver.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\easy.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\mprintf.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\multi.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\stdcheaders.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\system.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\typecheck-gcc.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\urlapi.h">
+      <Filter>libcurl</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd.h">
+      <Filter>cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="aes256.h">
+      <Filter>aes256</Filter>
+    </ClInclude>
+    <ClInclude Include="httpclient.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="httpserver.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="TableManagerSub.h">
+      <Filter>capture</Filter>
+    </ClInclude>
+    <ClInclude Include="appclient.h">
+      <Filter>client</Filter>
+    </ClInclude>
+    <ClInclude Include="cmdMainSub.h">
+      <Filter>cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="desktopCaptureSecond.h">
+      <Filter>capture</Filter>
+    </ClInclude>
+    <ClInclude Include="tcpclient.h">
+      <Filter>client</Filter>
+    </ClInclude>
+    <ClInclude Include="svpng.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\amsEdit.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlComboBox.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlCurrencyEdit.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlDateEdit.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlEditBase.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlMap.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlMaskEdit.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\DateEdit.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="editlist\ListCtrlEdit.h">
+      <Filter>editlist</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogNeibu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CMethodConfigDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MoneyMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NewTableManager.h">
+      <Filter>capture</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AppDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CDialogHome.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="LogManager.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="ocr.cpp">
+      <Filter>ocr</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureScreen.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+    <ClCompile Include="desktopCapture.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+    <ClCompile Include="TableManager.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_reader.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_value.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_writer.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="curl\CurlhttpClien.cpp">
+      <Filter>libcurl</Filter>
+    </ClCompile>
+    <ClCompile Include="cmd.cpp">
+      <Filter>cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="aes256.cpp">
+      <Filter>aes256</Filter>
+    </ClCompile>
+    <ClCompile Include="httpclient.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="httpserver.cpp">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="TableManagerSub.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+    <ClCompile Include="appclient.cpp">
+      <Filter>client</Filter>
+    </ClCompile>
+    <ClCompile Include="desktopCaptureSecond.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpclient.cpp">
+      <Filter>client</Filter>
+    </ClCompile>
+    <ClCompile Include="svpng.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\amsEdit.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlComboBox.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlCurrencyEdit.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlDateEdit.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlEdit.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlEditBase.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlMap.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\ListCtrlMaskEdit.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="editlist\DateEdit.cpp">
+      <Filter>editlist</Filter>
+    </ClCompile>
+    <ClCompile Include="CDialogConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CDialogNeibu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CMethodConfigDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CDialogTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MoneyMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NewTableManager.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="App.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\App.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="json\json_internalarray.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\json_internalmap.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\json_valueiterator.inl">
+      <Filter>json</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\App.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="openssl\libeay32.lib" />
+    <Library Include="openssl\ssleay32.lib" />
+    <Library Include="zlib.lib" />
+  </ItemGroup>
+</Project>

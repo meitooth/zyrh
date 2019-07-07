@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="xshell">
+      <UniqueIdentifier>{e5238dee-4e2c-4b48-89ca-408c38558e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opencv">
+      <UniqueIdentifier>{92750da6-758f-4751-9e0b-e9be2f0644c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opencv\debug">
+      <UniqueIdentifier>{0209cc7e-3f21-4c72-a1b6-9ae78a0c76dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opencv\release">
+      <UniqueIdentifier>{57e78f82-1a68-4e74-baea-f0fdccde921f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{b75288dc-9237-417f-bcbd-6417595f03c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{2e51b675-1623-4662-95f7-9e87018342a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="websocket">
+      <UniqueIdentifier>{bf944813-4d76-43f5-9b04-8cfac8d4ea87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="curl">
+      <UniqueIdentifier>{52847853-33c6-4088-8187-12751e2ac956}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="app.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="desktopCapture1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="log_deffine.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="LogManager.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_tool.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\allocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\assertions.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\autolink.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\config.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\features.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\forwards.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\value.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\version.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptureScreen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_batchallocator.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json_cmd.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\curl.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\curlver.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\easy.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\mprintf.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\multi.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\stdcheaders.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\system.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\typecheck-gcc.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="curl\CurlhttpClient.h">
+      <Filter>curl</Filter>
+    </ClInclude>
+    <ClInclude Include="TableManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ocr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\arg_parser.h">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\debug.h">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\dump.h">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\linux_shell.hpp">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\pprocess.h">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\ppworker.hpp">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\win_service.h">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\win_shell.hpp">
+      <Filter>xshell</Filter>
+    </ClInclude>
+    <ClInclude Include="xshell\xshell.hpp">
+      <Filter>xshell</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="zyrhpic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="app.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="desktopCapture1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="LogManager.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_reader.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_value.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json_writer.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureScreen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="curl\CurlhttpClien.cpp">
+      <Filter>curl</Filter>
+    </ClCompile>
+    <ClCompile Include="TableManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ocr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xshell\arg_parser.cpp">
+      <Filter>xshell</Filter>
+    </ClCompile>
+    <ClCompile Include="xshell\dump.cpp">
+      <Filter>xshell</Filter>
+    </ClCompile>
+    <ClCompile Include="xshell\pprocess.cpp">
+      <Filter>xshell</Filter>
+    </ClCompile>
+    <ClCompile Include="xshell\win_service.cpp">
+      <Filter>xshell</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="libyuv\x86\yuv.lib" />
+    <Library Include="curl\libcurl.lib">
+      <Filter>curl</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\json_valueiterator.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\json_internalarray.inl">
+      <Filter>json</Filter>
+    </None>
+    <None Include="json\json_internalmap.inl">
+      <Filter>json</Filter>
+    </None>
+  </ItemGroup>
+</Project>

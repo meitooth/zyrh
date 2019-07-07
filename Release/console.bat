@@ -1,0 +1,2 @@
+zyrhpic.exe -c
+pause
