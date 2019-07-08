@@ -1972,3 +1972,70 @@ void ReadAI(std::vector<AI_S>& ais, std::vector<AI_Money> &aimoneys)
 	fin.close();
 
 }
+
+ void ReadAI2(std::map<int,AI_Ttoal>& AI_Ttoals )
+ {
+	 std::fstream fin("./AI.txt"); //打开文件
+	std::string ReadLine;
+	std::string ret;
+	while (getline(fin, ReadLine)) //逐行读取，直到结束
+	{
+		ReadLine = replace_all(ReadLine, " ", "");
+		//没有=
+		if(ReadLine.find("table:") != std::string::npos)
+		{
+			std::vector<AI_Methond> aimethods; 
+			std::vector<AI_Money> imoneys;
+			std::string method;
+			ReadLine = replace_all(ReadLine, "table:", "");
+			int tableId = atoi(ReadLine.c_str());
+			while (getline(fin, ReadLine)) //逐行读取，直到结束
+			{
+				std::vector<std::string> strlist = splitWithStl(ReadLine, "=");
+				if (strlist.size() == 4)
+				{
+					AI_Money aimoney;
+					aimoney.nIndex = atoi(strlist[0].c_str());
+					aimoney.nMoney = atoi(strlist[1].c_str());
+					aimoney.nWinindex = atoi(strlist[2].c_str());
+					aimoney.nLossIndex = atoi(strlist[3].c_str());
+					aimoneys.push_back(aimoney);
+				}
+				else{
+					break;
+				}
+			}
+			while (getline(fin, ReadLine)) //逐行读取，直到结束
+			{
+				std::vector<std::string> strlist = splitWithStl(ReadLine, "=");
+				if (strlist.size() == 3)
+				{
+					AI_Methond aimethod;
+					aimethod.nIndex = atoi(strlist[0].c_str());
+					aimethod.nWinindex = atoi(strlist[1].c_str());
+					aimethod.nLossIndex = atoi(strlist[2].c_str());
+					aimethods.push_back(aimethod);
+				}
+				else{
+					break;
+				}
+			}
+			if (getline(fin, ReadLine)) //逐行读取，直到结束
+			{
+				ReadLine = replace_all(ReadLine, " ", "");
+				method = ReadLine;
+			}
+			if (getline(fin, ReadLine)) //逐行读取，直到结束
+			{
+				ReadLine = replace_all(ReadLine, " ", "");
+				method += ReadLine;
+			}
+			AI_Ttoals[tableId].aimethods = aimethods;
+			AI_Ttoals[tableId].aimoneys = aimoneys;
+			AI_Ttoals[tableId].method = method;
+			
+		}
+		
+	}
+	fin.close();
+ }

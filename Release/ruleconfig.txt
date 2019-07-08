@@ -7,6 +7,9 @@ playtype=1
 //第二屏幕的金额
 SecondMoney=1000
 
+//1 第一种原来的方式 2第二种按照算法打的
+AIType=1
+
 
 
 

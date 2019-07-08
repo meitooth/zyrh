@@ -28,7 +28,7 @@ DesktopCapturer* GetDesktopCapture1()
 }
 DesktopCapturer::DesktopCapturer()
 {
-	ReadAI(m_Ais, m_Moneys);
+	
 	gDesktopCapturer1 = this;
 	m_pClickCancl = &m_ClickCancleInfoList[0];
 	m_pClickCanclSecond = &m_ClickCancleInfoListSecond[0];
@@ -51,6 +51,8 @@ void DesktopCapturer::Start()
 // 	{
 // 		m_TableList[i].ResetBet();
 // 	}
+    ReadAI(m_Ais, m_Moneys);
+	ReadAI2(m_AI_Ttoals);
 	m_Status = STATUS_START;
 	if (m_bStartThread == true)
 	{
@@ -471,47 +473,94 @@ void DesktopCapturer::Capturer()
 	int j = 0;
 	if (m_Buflist.size() == 0)
 	{
-		for (int j = 0;j < m_NewTableList.size();j++)
+		if(m_AiTYpe == 1)
 		{
-			m_Buflist.push_back(NULL);
-			m_Buflistx.push_back(NULL);
-		}
-		for (int j = 0;j<m_NewTableList.size();j++)
-		{
+			for (int j = 0;j < m_NewTableList.size();j++)
+			{
+				m_Buflist.push_back(NULL);
+				m_Buflistx.push_back(NULL);
+			}
+			for (int j = 0;j<m_NewTableList.size();j++)
+			{
 
 			
-    		std::shared_ptr<std::thread> pthread;
-			bool bStart = false;
-			pthread.reset(new std::thread([=,&j,&bStart]
-			{
-				int index = j;
-				bStart = true;				
-				while (m_Status != STATUS_STOP )
+				std::shared_ptr<std::thread> pthread;
+				bool bStart = false;
+				pthread.reset(new std::thread([=,&j,&bStart]
 				{
-					std::shared_ptr<rbgbuf> bufptr;
-					m_mutex.lock();
-					if(m_Buflist.size() != 0)
-						bufptr = m_Buflist[index];
-					m_Buflist[index] = NULL;
-					m_mutex.unlock();
-					if (bufptr&&!m_NewTableList[index].IsPause())
-					{						
-						m_NewTableList[index].HandleARGB(bufptr->buf, width, height);
-					}
-					else
+					int index = j;
+					bStart = true;				
+					while (m_Status != STATUS_STOP )
 					{
-						Sleep(100);						
-					}
+						std::shared_ptr<rbgbuf> bufptr;
+						m_mutex.lock();
+						if(m_Buflist.size() != 0)
+							bufptr = m_Buflist[index];
+						m_Buflist[index] = NULL;
+						m_mutex.unlock();
+						if (bufptr&&!m_NewTableList[index].IsPause())
+						{						
+							m_NewTableList[index].HandleARGB(bufptr->buf, width, height);
+						}
+						else
+						{
+							Sleep(100);						
+						}
 										
+					}
 				}
+				));
+				while (!bStart)
+				{
+					Sleep(1);
+				}
+				//pthreadx->detach();
+				pthread->detach();
 			}
-			));
-			while (!bStart)
+		}
+		else{
+			for (int j = 0;j < m_New1TableList.size();j++)
 			{
-				Sleep(1);
+				m_Buflist.push_back(NULL);
+				m_Buflistx.push_back(NULL);
 			}
-			//pthreadx->detach();
-			pthread->detach();
+			for (int j = 0;j<m_New1TableList.size();j++)
+			{
+
+			
+				std::shared_ptr<std::thread> pthread;
+				bool bStart = false;
+				pthread.reset(new std::thread([=,&j,&bStart]
+				{
+					int index = j;
+					bStart = true;				
+					while (m_Status != STATUS_STOP )
+					{
+						std::shared_ptr<rbgbuf> bufptr;
+						m_mutex.lock();
+						if(m_Buflist.size() != 0)
+							bufptr = m_Buflist[index];
+						m_Buflist[index] = NULL;
+						m_mutex.unlock();
+						if (bufptr&&!m_New1TableList[index].IsPause())
+						{						
+							m_New1TableList[index].HandleARGB(bufptr->buf, width, height);
+						}
+						else
+						{
+							Sleep(100);						
+						}
+										
+					}
+				}
+				));
+				while (!bStart)
+				{
+					Sleep(1);
+				}
+				//pthreadx->detach();
+				pthread->detach();
+			}
 		}
 	}
 	Sleep(2000);
@@ -569,9 +618,18 @@ void DesktopCapturer::Capturer()
 		}
 		
  		m_mutex.lock();
-		for (int i = 0;i<m_NewTableList.size();i++)
+		if(m_AiTYpe == 1)
 		{
-			m_Buflist[i] = bufptr;
+			for (int i = 0;i<m_NewTableList.size();i++)
+			{	
+				m_Buflist[i] = bufptr;
+			}
+		}
+		else{
+			for (int i = 0;i<m_New1TableList.size();i++)
+			{
+				m_Buflist[i] = bufptr;
+			}
 		}
  		m_mutex.unlock();
 	}
@@ -636,10 +694,20 @@ std::string DesktopCapturer::GetTableInfo(int index)
 }
 void DesktopCapturer::Pause(int index, bool bPause)
 {
-	if (m_NewTableList.size() > 0)
+	if(m_AiTYpe == 1)
 	{
-		m_NewTableList[index].SetPause(bPause);
+		if (m_NewTableList.size() > 0)
+		{
+			m_NewTableList[index].SetPause(bPause);
+		}
 	}
+	else{
+		if (m_New1TableList.size() > 0)
+		{
+			m_New1TableList[index].SetPause(bPause);
+		}
+	}
+	
 	
 }
 
@@ -717,8 +785,18 @@ int DesktopCapturer::GetStatus(int nTableId)
 }
 void DesktopCapturer::SetBuf(std::shared_ptr<rbgbuf> buf)
 {
-	for (int i = 0;i<m_NewTableList.size();i++)
+	if(m_AiTYpe== 1)
 	{
-		m_NewTableList[i].SetBuf(buf);
+		for (int i = 0;i<m_NewTableList.size();i++)
+		{	
+			m_NewTableList[i].SetBuf(buf);
+		}
 	}
+    else{
+		for (int i = 0;i<m_New1TableList.size();i++)
+		{	
+			m_New1TableList[i].SetBuf(buf);
+		}
+	}
+	
 }

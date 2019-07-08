@@ -12,6 +12,7 @@
 #include "httpserver.h"
 #include "cmd.h"
 #include "NewTableManager.h"
+#include "New1TableManager.h"
 enum
 {
 	STATUS_START = 0,
@@ -59,6 +60,10 @@ public:
 	void Init(std::vector<CNewTableManager>& tableList)
 	{
 		m_NewTableList = tableList;
+	}
+	void Init(std::vector<CNew1TableManager>& tableList)
+	{
+		m_New1TableList = tableList;
 	}
 	void Start();
 	void Pause();
@@ -150,11 +155,22 @@ public:
 	bool CheckColin(bool IsMain, int TableId,int Colin);
 	bool SetFan(int TableId)
 	{
- 		if (m_NewTableList.size() > 0&&TableId < m_NewTableList.size())
- 		{
- 			return m_NewTableList[TableId - 1].SetNeedFan();
- 		}
-		return false;
+		if(m_AiTYpe == 1)
+		{
+			if (m_NewTableList.size() > 0&&TableId < m_NewTableList.size())
+			{
+				return m_NewTableList[TableId - 1].SetNeedFan();
+			}
+			return false;
+		}
+		else{
+			if (m_New1TableList.size() > 0&&TableId < m_New1TableList.size())
+			{
+				return m_New1TableList[TableId - 1].SetNeedFan();
+			}
+			return false;
+		}
+ 		
 		
 	}
 	void GetNumber();
@@ -199,10 +215,12 @@ public:
 	int m_nSecond = 1000;
 	int m_nStopSubNumber = 100;
 	int m_nplaytype = 1;
+	int m_AiTYpe = 1;
 	int StopLoss = 0; //止损（“主”客户端允许输入，“从”客户端仅显示数据）
 	int StopProfit = 0;//止盈（“主”客户端允许输入，“从”客户端仅显示数据）
 	//std::vector<CTableManager> m_TableList;
 	std::vector<CNewTableManager> m_NewTableList;
+	std::vector<CNew1TableManager> m_New1TableList;
 	bool m_bNeedCopy = false;
 	bool m_bNeedCopySecond = false;
 	int nFlashX = 0;
@@ -219,6 +237,7 @@ public:
 
 	std::vector<AI_S> m_Ais;
 	std::vector<AI_Money> m_Moneys;
+	std::map<int,AI_Ttoal>  m_AI_Ttoals;
 };
 extern DesktopCapturer* GetDesktopCapture();
 extern DesktopCapturer* GetDesktopCapture1();
