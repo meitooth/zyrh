@@ -51,7 +51,7 @@ void DesktopCapturer::Start()
 // 	{
 // 		m_TableList[i].ResetBet();
 // 	}
-    ReadAI(m_Ais, m_Moneys);
+	ReadAI(m_Ais, m_Moneys);
 	ReadAI2(m_AI_Ttoals);
 	m_Status = STATUS_START;
 	if (m_bStartThread == true)

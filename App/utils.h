@@ -81,7 +81,7 @@
 	 int nIndex;
 	 int nMoney;
  };
-  struct AI_Methond
+  struct AI_Method
  {
 	 int nWinindex;
 	 int nLossIndex;
@@ -90,10 +90,10 @@
  
  
  struct AI_Ttoal{
-	 AI_Methond aimehtods;
-	 AI_Money   aimoneys;
+	 std::vector<AI_Method> aimethods;
+	 std::vector <AI_Money>   aimoneys;
 	 std::string  method;
 	 
- }AI;
+ };
  void ReadAI(std::vector<AI_S>& ais, std::vector<AI_Money> &imoneys);
  void ReadAI2(std::map<int,AI_Ttoal>& AI_Ttoals);

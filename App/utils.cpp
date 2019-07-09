@@ -1975,7 +1975,7 @@ void ReadAI(std::vector<AI_S>& ais, std::vector<AI_Money> &aimoneys)
 
  void ReadAI2(std::map<int,AI_Ttoal>& AI_Ttoals )
  {
-	 std::fstream fin("./AI.txt"); //打开文件
+	 std::fstream fin("./AI2.txt"); //打开文件
 	std::string ReadLine;
 	std::string ret;
 	while (getline(fin, ReadLine)) //逐行读取，直到结束
@@ -1984,8 +1984,8 @@ void ReadAI(std::vector<AI_S>& ais, std::vector<AI_Money> &aimoneys)
 		//没有=
 		if(ReadLine.find("table:") != std::string::npos)
 		{
-			std::vector<AI_Methond> aimethods; 
-			std::vector<AI_Money> imoneys;
+			std::vector<AI_Method> aimethods; 
+			std::vector<AI_Money> aimoneys;
 			std::string method;
 			ReadLine = replace_all(ReadLine, "table:", "");
 			int tableId = atoi(ReadLine.c_str());
@@ -2010,7 +2010,7 @@ void ReadAI(std::vector<AI_S>& ais, std::vector<AI_Money> &aimoneys)
 				std::vector<std::string> strlist = splitWithStl(ReadLine, "=");
 				if (strlist.size() == 3)
 				{
-					AI_Methond aimethod;
+					AI_Method aimethod;
 					aimethod.nIndex = atoi(strlist[0].c_str());
 					aimethod.nWinindex = atoi(strlist[1].c_str());
 					aimethod.nLossIndex = atoi(strlist[2].c_str());

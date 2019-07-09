@@ -255,6 +255,9 @@
     <ClInclude Include="NewTableManager.h">
       <Filter>capture</Filter>
     </ClInclude>
+    <ClInclude Include="New1TableManager.h">
+      <Filter>capture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp">
@@ -372,6 +375,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="NewTableManager.cpp">
+      <Filter>capture</Filter>
+    </ClCompile>
+    <ClCompile Include="New1TableManager.cpp">
       <Filter>capture</Filter>
     </ClCompile>
   </ItemGroup>

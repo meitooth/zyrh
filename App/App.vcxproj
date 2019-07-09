@@ -242,6 +242,7 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="log_deffine.h" />
     <ClInclude Include="MoneyMgr.h" />
+    <ClInclude Include="New1TableManager.h" />
     <ClInclude Include="NewTableManager.h" />
     <ClInclude Include="ocr.h" />
     <ClInclude Include="Resource.h" />
@@ -315,6 +316,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="MoneyMgr.cpp" />
+    <ClCompile Include="New1TableManager.cpp" />
     <ClCompile Include="NewTableManager.cpp" />
     <ClCompile Include="ocr.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>

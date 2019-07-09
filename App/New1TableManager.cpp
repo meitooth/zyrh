@@ -520,7 +520,7 @@ bool CNew1TableManager::CheckNewBet(uint8_t* buf, int nWidth, int nHeight)
 	}
 	return false;
 }
-void CNewTableManager::HandleBet(uint8_t* buf, int nWidth, int nHeight)
+void CNew1TableManager::HandleBet(uint8_t* buf, int nWidth, int nHeight)
 {
 	
 	LOG_FILE("TableId:%d %02d:%02d 开始检测结果 当前状态%d", m_TableId, m_nLastSetNumber, m_nLastSubNumber, m_nStatus);
@@ -577,7 +577,8 @@ void CNewTableManager::HandleBet(uint8_t* buf, int nWidth, int nHeight)
 				//win
 				if (m_lastBoardInfoRequest.BetType == BetResultList[0])
 				{
-					m_lastBoardInfoRequest.methodIndex = GetDesktopCapture()->m_AI_Ttoals[m_TableId].aimehtods[m_lastBoardInfoRequest.methodIndex].nWinindex - 1;
+					m_lastBoardInfoRequest.methodIndex = GetDesktopCapture()->m_AI_Ttoals[m_TableId].aimethods[m_lastBoardInfoRequest.methodIndex].nWinindex - 1;
+
 					m_moneyIndex = GetDesktopCapture()->m_AI_Ttoals[m_TableId].aimoneys[m_moneyIndex].nWinindex - 1;
 					if (m_lastBoardInfoRequest.BetType == 1)
 					{
@@ -592,7 +593,7 @@ void CNewTableManager::HandleBet(uint8_t* buf, int nWidth, int nHeight)
 				}//loss
 				else
 				{
-					m_lastBoardInfoRequest.methodIndex = GetDesktopCapture()->m_AI_Ttoals[m_TableId].aimehtods[m_lastBoardInfoRequest.methodIndex].nLossIndex - 1;
+					m_lastBoardInfoRequest.methodIndex = GetDesktopCapture()->m_AI_Ttoals[m_TableId].aimethods[m_lastBoardInfoRequest.methodIndex].nLossIndex - 1;
 					m_moneyIndex = GetDesktopCapture()->m_AI_Ttoals[m_TableId].aimoneys[m_moneyIndex].nLossIndex - 1;
 					m_lastBoardInfoRequest.Profit = m_lastBoardInfoRequest.CoinsBet*-1;
 					pTabInfoMsg->IsLost = true;
